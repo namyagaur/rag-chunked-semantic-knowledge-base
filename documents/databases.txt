@@ -1,0 +1,43 @@
+# Database Management Systems
+
+A database management system, commonly called a DBMS, is software used to store, organize, retrieve, and manage data. Databases are fundamental to applications such as banking systems, e-commerce platforms, social networks, and enterprise software.
+
+## Relational Databases
+
+A relational database stores information in tables consisting of rows and columns. Each table usually represents an entity or relationship. Examples of relational database systems include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server.
+
+## Tables and Keys
+
+A table contains records represented as rows. Columns describe attributes of those records. A primary key uniquely identifies each row in a table. A foreign key creates a relationship between records in different tables by referring to a key in another table.
+
+## SQL
+
+Structured Query Language, or SQL, is used to interact with relational databases. Common SQL operations include SELECT for retrieving data, INSERT for adding records, UPDATE for modifying records, and DELETE for removing records.
+
+## Database Normalization
+
+Normalization is a technique used to organize relational data and reduce unnecessary duplication. Normal forms such as First Normal Form, Second Normal Form, and Third Normal Form provide increasingly strict rules for structuring tables and relationships.
+
+## Transactions
+
+A database transaction is a sequence of operations treated as a single logical unit of work. Transactions are commonly described using the ACID properties: atomicity, consistency, isolation, and durability.
+
+## Indexing
+
+An index is a data structure that helps a database locate records more efficiently. Without a suitable index, a database may need to examine many rows to answer a query. Indexes can significantly improve read performance but require additional storage and may increase the cost of insert and update operations.
+
+## Joins
+
+SQL joins combine information from multiple tables. An INNER JOIN returns matching records from both tables. LEFT JOIN keeps all records from the left table while adding matching information from the right table when available.
+
+## Query Optimization
+
+Database systems use query optimizers to determine efficient execution strategies. The optimizer may consider indexes, join order, filtering conditions, and available statistics when deciding how to execute a query.
+
+## NoSQL Databases
+
+NoSQL databases provide alternatives to the traditional relational model. Document databases store records in document-like structures, key-value databases associate keys with values, and graph databases represent relationships explicitly. NoSQL systems can be useful when applications require flexible schemas or particular scalability characteristics.
+
+## Database Security
+
+Database security involves protecting stored information from unauthorized access, modification, or deletion. Authentication, authorization, encryption, access control, backups, and auditing are important components of a secure database system.

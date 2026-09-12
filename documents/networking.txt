@@ -1,0 +1,51 @@
+# Computer Networking
+
+Computer networking is the practice of connecting computers and other devices so that they can exchange data and share resources. Networks range from small local networks to the global Internet.
+
+## Network Models
+
+Networking concepts are commonly organized into layers. The OSI model contains seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. The TCP/IP model uses a smaller number of layers and is the practical foundation of the Internet.
+
+## IP Addresses
+
+An IP address identifies a device or network interface within an IP network. IPv4 addresses use 32 bits and are commonly written using four decimal numbers. IPv6 uses 128-bit addresses and was developed partly because the available IPv4 address space is limited.
+
+## TCP and UDP
+
+TCP and UDP are transport-layer protocols. TCP provides reliable, ordered delivery using mechanisms such as acknowledgments, retransmissions, and flow control. UDP is connectionless and provides lower protocol overhead but does not guarantee delivery or ordering.
+
+## HTTP and HTTPS
+
+HTTP is an application-layer protocol used for communication between clients and web servers. HTTPS uses HTTP over a secure cryptographic connection, typically using TLS. HTTPS helps protect data from interception and provides server authentication.
+
+## DNS
+
+The Domain Name System translates human-readable domain names into IP addresses and other records. When a user enters a domain name into a browser, DNS resolution helps determine which server should receive the request.
+
+## Routing
+
+Routers forward packets between networks. Routing protocols and routing tables help determine where packets should be sent. The Internet consists of many interconnected networks that communicate using IP-based routing.
+
+## MAC Addresses
+
+A MAC address is associated with a network interface and operates primarily at the data-link layer. Ethernet networks use MAC addresses to identify devices on a local network segment.
+
+## Network Ports
+
+A port number identifies a logical communication endpoint associated with a process or service. Common services use conventional port numbers, although applications can use other ports as well.
+
+## Network Security
+
+Network security protects communication systems and data against unauthorized access, attacks, and disruption. Firewalls, encryption, authentication, intrusion detection, and secure protocols are commonly used security mechanisms.
+
+## Latency and Bandwidth
+
+Latency describes the time required for data to travel between endpoints. Bandwidth represents the maximum data-transfer capacity of a connection. A network can have high bandwidth while still experiencing high latency.
+
+## Web Communication
+
+When a browser requests a webpage, several networking operations may occur. DNS can resolve the domain, a connection can be established with the server, and HTTP requests can retrieve resources such as HTML, CSS, JavaScript, and images. Modern web applications often use additional protocols and caching mechanisms to improve performance.
+
+## Distributed Systems
+
+Networking is fundamental to distributed systems, where multiple computers cooperate to provide a service. Distributed systems must deal with issues such as communication failures, latency, synchronization, consistency, and partial failures.

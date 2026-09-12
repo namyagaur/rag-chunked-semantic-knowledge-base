@@ -1,0 +1,47 @@
+# Operating Systems
+
+An operating system is system software that manages computer hardware and provides services to application programs. It acts as an intermediary between users, applications, and hardware resources.
+
+## Processes
+
+A process is a program in execution. A process has its own address space and system resources. Operating systems maintain information about processes using structures such as process control blocks. A process can move through states including new, ready, running, waiting, and terminated.
+
+## Threads
+
+A thread is a unit of execution within a process. Multiple threads belonging to the same process can share resources such as memory while maintaining separate execution states. Multithreading can improve responsiveness and allow programs to perform multiple activities concurrently.
+
+## CPU Scheduling
+
+When multiple processes are ready to execute, the operating system must decide which process receives CPU time. Common scheduling algorithms include First-Come, First-Served, Shortest Job First, Round Robin, and Priority Scheduling.
+
+## Memory Management
+
+Memory management controls how processes use main memory. The operating system allocates memory to processes and keeps track of which memory regions are available. Efficient memory management is necessary because physical memory is limited.
+
+## Virtual Memory
+
+Virtual memory allows processes to use an address space larger than the available physical memory. The operating system can move portions of memory between RAM and secondary storage. Paging is a common technique used to implement virtual memory.
+
+## Paging
+
+Paging divides logical memory into fixed-size pages and physical memory into frames. A page table maps virtual pages to physical frames. Paging avoids the need for a process to occupy one contiguous region of physical memory.
+
+## Page Replacement
+
+When a required page is not present in physical memory, a page fault occurs. If all available frames are occupied, the operating system must choose a page to remove. Page replacement algorithms include FIFO, LRU, and Optimal Page Replacement.
+
+## Deadlocks
+
+A deadlock occurs when processes become permanently blocked because each process is waiting for a resource held by another process. Four conditions are commonly associated with deadlock: mutual exclusion, hold and wait, no preemption, and circular wait.
+
+## File Systems
+
+File systems organize data stored on secondary storage. They provide mechanisms for creating, reading, writing, deleting, and organizing files and directories. File systems also manage metadata such as file size, permissions, ownership, and timestamps.
+
+## System Calls
+
+System calls provide an interface through which user programs request services from the operating system kernel. Examples include operations related to process creation, file access, memory management, and communication.
+
+## Synchronization
+
+When multiple threads access shared data concurrently, race conditions can occur. Synchronization mechanisms such as mutexes, semaphores, and monitors help coordinate access to shared resources and maintain consistency.
