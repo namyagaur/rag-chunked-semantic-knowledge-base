@@ -1,4 +1,11 @@
 from pathlib import Path
+from sentence_transformers import SentenceTransformer
+
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+def embedding_model(text):
+    return model.encode(text)
 
 files = Path("documents").glob("*.txt")
 
@@ -13,7 +20,8 @@ def chunk_text(source,chunk_size,overlap):
             "metadata":{
                 "source" : source,
                 "chunkid": chunkid
-            }
+            },
+            "embedding": embedding_model(text[i:i+chunk_size])
         })
     return chunks
 for file in files:
