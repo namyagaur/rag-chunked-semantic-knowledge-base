@@ -1,8 +1,10 @@
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
-
+import numpy as np
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
+def cosine_sim(a,b):
+    return (np.dot(a,b))/(np.linalg.norm(a)*np.linalg.norm(b))
 
 def embedding_model(text):
     return model.encode(text)
@@ -27,3 +29,21 @@ def chunk_text(source,chunk_size,overlap):
 for file in files:
     chunk_list.extend(chunk_text(file,200,50))
 
+full_doc = chunk_list
+def retrieve(query,full_docs,k):
+    res = []
+    query_emb = embedding_model(query)
+
+    for d in full_docs:
+        res.append({
+            "source":d["metadata"]["source"],
+            "chunkid": d["metadata"]["chunkid"],
+            "score": cosine_sim(query_emb,d["embedding"])
+        })
+
+    res.sort(key = lambda x : x["score"], reverse= True)
+    return res[:k]
+
+
+query = input("Enter your query: ")
+print(retrieve(query,full_doc,2))
