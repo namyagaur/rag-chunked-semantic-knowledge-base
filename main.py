@@ -47,4 +47,10 @@ def retrieve(query,full_docs,k):
 
 
 query = input("Enter your query: ")
-print(retrieve(query,full_doc,2))
+
+for rank,chunk in enumerate(retrieve(query,full_doc,5),start=1):
+    print(f"----- Rank{rank}-----")
+    print("Score:----  ", chunk["source"])
+    print("Content:---  ",chunk["content"])
+    print("Chunk-ID:---  ",chunk["chunkid"])
+    print("Score:---  ",chunk["score"])
