@@ -37,6 +37,7 @@ def retrieve(query,full_docs,k):
     for d in full_docs:
         res.append({
             "source":d["metadata"]["source"],
+            "content":d["content"],
             "chunkid": d["metadata"]["chunkid"],
             "score": cosine_sim(query_emb,d["embedding"])
         })
